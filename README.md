@@ -47,6 +47,9 @@ Load the dataset from the specified path in Google Drive:
 
 python
 Copy code
+from pathlib import Path
+import pandas as pd
+
 csv_path = Path('/content/drive/My Drive/credit_risk_classification/Resources/lending_data.csv')
 lending_df = pd.read_csv(csv_path)
 Data Preparation:
@@ -83,6 +86,7 @@ Generate and print the confusion matrix and classification report:
 python
 Copy code
 from sklearn.metrics import confusion_matrix, classification_report
+
 conf_matrix = confusion_matrix(y_test, y_pred)
 print(f"Confusion Matrix:\n{conf_matrix}")
 
